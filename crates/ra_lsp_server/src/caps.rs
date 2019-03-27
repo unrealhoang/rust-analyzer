@@ -37,6 +37,7 @@ pub fn server_capabilities() -> ServerCapabilities {
             first_trigger_character: "=".to_string(),
             more_trigger_character: Some(vec![".".to_string()]),
         }),
+        selection_range_provider: Some(true),
         folding_range_provider: Some(FoldingRangeProviderCapability::Simple(true)),
         rename_provider: Some(RenameProviderCapability::Options(RenameOptions {
             prepare_provider: Some(true),

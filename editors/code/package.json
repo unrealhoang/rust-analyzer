@@ -18,7 +18,7 @@
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "package": "vsce package",
-        "compile": "tsc -p ./",
+        "compile": "tsc -p ./ || true",
         "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "fix": "prettier **/*.{json,ts} --write && tslint --project . --fix",
@@ -31,7 +31,7 @@
         "singleQuote": true
     },
     "dependencies": {
-        "vscode-languageclient": "^5.3.0-next.1"
+        "vscode-languageclient": "file:///home/matklad/projects/vscode-languageserver-node/client"
     },
     "devDependencies": {
         "@types/mocha": "^5.2.5",
@@ -124,11 +124,6 @@
             {
                 "command": "rust-analyzer.matchingBrace",
                 "key": "ctrl+shift+m",
-                "when": "editorTextFocus && editorLangId == rust"
-            },
-            {
-                "command": "rust-analyzer.extendSelection",
-                "key": "shift+alt+right",
                 "when": "editorTextFocus && editorLangId == rust"
             },
             {
