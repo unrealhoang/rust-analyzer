@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["msg","Defines messages for cross-process message based on `ndjson` wire protocol"]],"struct":[["ExpansionResult",""],["ExpansionTask",""],["ProcMacroClient",""],["ProcMacroProcessExpander",""]]});
